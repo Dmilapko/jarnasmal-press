@@ -6,6 +6,7 @@ Release: August 17, 2026 (Steam)
 Platforms: Windows, Linux/SteamOS
 Price: TBA
 Steam: https://store.steampowered.com/app/4707520/Jarnasmal/
+Trailer: https://youtu.be/B97-VtjghO8
 Demo: free, live now — featured in Steam Bullet Fest (Jun 8-15) and Steam Next Fest (Jun 15-22, 2026)
 Engine: custom C++ engine
 Art: hand-drawn, 100% human-made
