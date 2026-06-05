@@ -1,0 +1,56 @@
+JARNASMAL — factsheet
+=====================
+
+Developer: Two-person indie team
+Release: August 17, 2026 (Steam)
+Platforms: Windows, Linux/SteamOS
+Price: TBA
+Steam: https://store.steampowered.com/app/4707520/Jarnasmal/
+Demo: free, live now — featured in Steam Bullet Fest (Jun 8-15) and Steam Next Fest (Jun 15-22, 2026)
+Engine: custom C++ engine
+Art: hand-drawn, 100% human-made
+Contact: heinzflying@gmail.com
+
+One-liner
+---------
+A bullet hell where Wi-Fi is your lifeline. Your blaster needs a live radio
+link to your ground station — build a mesh network of repeaters, or face the
+horde with nothing.
+
+Description
+-----------
+Your signal is your survival. Jarnasmal is a bullet hell built on one idea:
+your high-tech blaster requires a live radio connection to your ground
+station — and every wall, corridor, and cavern in the underground facility
+blocks your signal.
+
+Strong connection: endless ammunition, maximum damage, maxed-out skills.
+Weak connection: your gun stalls, abilities degrade, explosions shrink.
+No connection: your blaster is dead, and the horde is still coming.
+
+You can't just run and gun — you plan. Place signal repeaters to forge a path
+through the depths, calculate tech-tree combinations, push radio performance
+with higher power, wall penetration, and directional antennas — while dodging
+thousands of projectiles at 1000-to-1 odds.
+
+Key features
+------------
+- Signal = survival: connection strength directly drives your firepower
+- Mesh-network building: every wall matters; repeater placement is your build
+- Deep repeater tech tree: multiply effects, boost power, punch through walls
+- Overwhelming odds: wall-climbers, mine layers, room floods, heavy tanks
+- Hand-drawn art: every frame inked by hand, 100% human-made
+
+In the demo
+-----------
+5 tutorial missions plus ~20 minutes of gameplay in the Underground Temple
+biome.
+
+Assets in this kit
+------------------
+screenshots/  6 screenshots, 1920x1080 JPG
+key-art/      main capsule, header capsule, header art (no text),
+              logo (white on transparent PNG), Steam header + capsule
+trailer/      trailer, 1080p MP4 (web-encoded)
+
+All assets may be used freely for coverage of Jarnasmal.

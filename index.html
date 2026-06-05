@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jarnasmal — Press Kit</title>
+<meta name="description" content="Press kit for Jarnasmal — a bullet hell where Wi-Fi is your lifeline. Free demo on Steam.">
+<meta property="og:title" content="Jarnasmal — Press Kit">
+<meta property="og:description" content="A bullet hell where Wi-Fi is your lifeline. Build a mesh network of repeaters — or face the horde with nothing.">
+<meta property="og:image" content="assets/key-art/steam_capsule_616x353.jpg">
+<link rel="icon" type="image/jpeg" href="assets/key-art/steam_header.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0c0a09;
+    --ink-soft: #161210;
+    --paper: #d6cfc2;
+    --paper-dim: #9b948a;
+    --rune: #e8231a;
+    --rune-glow: #ff3b30;
+    --night: #1a1a4e;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'Alegreya', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.65;
+    /* subtle ink-paper grain */
+    background-image:
+      radial-gradient(ellipse at 20% 0%, rgba(26,26,78,.18), transparent 50%),
+      radial-gradient(ellipse at 80% 100%, rgba(232,35,26,.05), transparent 45%);
+  }
+  h1, h2, h3, .runic { font-family: 'MedievalSharp', cursive; font-weight: 400; }
+
+  /* ---------- hero ---------- */
+  .hero {
+    position: relative;
+    min-height: 78vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 1.5rem 5rem;
+    overflow: hidden;
+    border-bottom: 3px solid var(--rune);
+  }
+  .hero::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: url("assets/key-art/jarnasmal_header_art.png") center 30%/cover no-repeat;
+    filter: brightness(.45) saturate(1.1);
+    z-index: 0;
+  }
+  .hero::after {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 70% 45% at 50% 42%, rgba(12,10,9,.55), transparent 70%),
+      linear-gradient(180deg, rgba(12,10,9,.6) 0%, rgba(12,10,9,.25) 45%, rgba(12,10,9,.92) 100%);
+    z-index: 1;
+  }
+  .hero > * { position: relative; z-index: 2; }
+  .hero img.logo {
+    width: min(680px, 88vw);
+    filter: drop-shadow(0 4px 24px rgba(0,0,0,.9));
+    animation: rise .9s ease-out both;
+  }
+  .hero p.tagline {
+    font-size: clamp(1.15rem, 2.6vw, 1.55rem);
+    max-width: 38ch;
+    margin: 1.6rem auto 0;
+    color: #f1ece2;
+    text-shadow: 0 2px 12px rgba(0,0,0,.95);
+    animation: rise .9s .15s ease-out both;
+  }
+  .hero p.tagline em { color: var(--rune-glow); font-style: normal; }
+  .press-label {
+    letter-spacing: .35em;
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: var(--paper-dim);
+    margin-top: 2.4rem;
+    animation: rise .9s .3s ease-out both;
+  }
+  .cta-row { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 1.1rem; animation: rise .9s .4s ease-out both; }
+  .btn {
+    font-family: 'MedievalSharp', cursive;
+    font-size: 1.15rem;
+    padding: .7rem 1.6rem;
+    border: 2px solid var(--rune);
+    color: var(--rune-glow);
+    text-decoration: none;
+    background: rgba(12,10,9,.7);
+    transition: background .2s, color .2s, transform .15s;
+    /* hand-cut corners */
+    clip-path: polygon(2% 0, 100% 4%, 98% 100%, 0 96%);
+  }
+  .btn:hover { background: var(--rune); color: var(--ink); transform: translateY(-2px); }
+  .btn.solid { background: var(--rune); color: var(--ink); }
+  .btn.solid:hover { background: var(--rune-glow); }
+  @keyframes rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+
+  /* ---------- layout ---------- */
+  main { max-width: 1060px; margin: 0 auto; padding: 0 1.5rem; }
+  section { padding: 4.5rem 0 1rem; }
+  h2 {
+    font-size: clamp(1.7rem, 3.4vw, 2.3rem);
+    color: var(--rune-glow);
+    display: flex;
+    align-items: baseline;
+    gap: .8rem;
+    margin-bottom: 1.8rem;
+  }
+  /* signal-bars section glyph — the game's core mechanic as a motif */
+  .signal { display: inline-flex; align-items: flex-end; gap: 3px; height: 1.2rem; }
+  .signal i {
+    width: 5px; background: var(--rune); display: block;
+    animation: pulse 2.2s infinite;
+  }
+  .signal i:nth-child(1) { height: 30%; animation-delay: 0s; }
+  .signal i:nth-child(2) { height: 55%; animation-delay: .18s; }
+  .signal i:nth-child(3) { height: 80%; animation-delay: .36s; }
+  .signal i:nth-child(4) { height: 100%; animation-delay: .54s; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
+
+  /* ---------- factsheet ---------- */
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.4rem 2.5rem;
+    background: var(--ink-soft);
+    border: 1px solid #2a241f;
+    border-left: 4px solid var(--rune);
+    padding: 2rem 2.2rem;
+  }
+  .facts dt {
+    font-family: 'MedievalSharp', cursive;
+    color: var(--rune-glow);
+    font-size: 1.02rem;
+    letter-spacing: .04em;
+  }
+  .facts dd { margin: .15rem 0 0; color: var(--paper); }
+  .facts a { color: var(--paper); text-decoration-color: var(--rune); text-underline-offset: 3px; }
+  .facts a:hover { color: var(--rune-glow); }
+
+  /* ---------- about / features ---------- */
+  .about { display: grid; grid-template-columns: 1.4fr 1fr; gap: 2.5rem; align-items: start; }
+  .about .capsule { width: 100%; border: 1px solid #2a241f; box-shadow: 0 8px 40px rgba(0,0,0,.6); }
+  .about p + p { margin-top: 1rem; }
+  .lead { font-size: 1.18rem; }
+  .lead strong { color: var(--rune-glow); }
+
+  ul.features { list-style: none; margin-top: 1.2rem; }
+  ul.features li {
+    padding: .65rem 0 .65rem 2rem;
+    position: relative;
+    border-bottom: 1px dashed #2a241f;
+  }
+  ul.features li::before {
+    content: "ᛉ"; /* rune marker */
+    position: absolute; left: .2rem; top: .55rem;
+    color: var(--rune);
+    font-size: 1.1rem;
+  }
+  ul.features b { color: #f1ece2; }
+
+  /* ---------- trailer ---------- */
+  video {
+    width: 100%;
+    border: 2px solid var(--rune);
+    background: #000;
+    box-shadow: 0 10px 50px rgba(232,35,26,.12);
+  }
+  .hint { color: var(--paper-dim); font-size: .92rem; margin-top: .6rem; }
+  .hint a { color: var(--paper-dim); }
+
+  /* ---------- gallery ---------- */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
+  .grid button {
+    border: 1px solid #2a241f; padding: 0; background: none; cursor: zoom-in;
+    transition: transform .18s, border-color .18s;
+  }
+  .grid button:hover { transform: scale(1.025) rotate(-.4deg); border-color: var(--rune); }
+  .grid img { width: 100%; display: block; }
+  dialog {
+    border: 2px solid var(--rune); padding: 0; background: #000; max-width: min(1400px, 94vw);
+  }
+  dialog::backdrop { background: rgba(5,4,3,.93); }
+  dialog img { width: 100%; display: block; }
+
+  /* ---------- key art ---------- */
+  .art-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
+  .art-row figure {
+    background: var(--ink-soft); border: 1px solid #2a241f; padding: 1rem; text-align: center;
+  }
+  .art-row img { max-width: 100%; max-height: 200px; }
+  .art-row figcaption { margin-top: .7rem; font-size: .9rem; color: var(--paper-dim); }
+  .art-row a { color: var(--rune-glow); }
+
+  /* ---------- footer ---------- */
+  footer {
+    margin-top: 5rem; padding: 3rem 1.5rem 3.5rem;
+    border-top: 3px solid var(--rune);
+    text-align: center; color: var(--paper-dim);
+    background: var(--ink-soft);
+  }
+  footer .runic { color: var(--rune); font-size: 1.4rem; letter-spacing: .2em; }
+  footer a { color: var(--paper); }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+  @media (max-width: 720px) {
+    .about { grid-template-columns: 1fr; }
+    .hero { min-height: 64vh; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img class="logo" src="assets/key-art/jarnasmal_header_text.png" alt="JARNASMAL">
+  <p class="tagline">A bullet hell where <em>Wi-Fi is your lifeline</em>. Build a mesh network of repeaters — or face the horde with nothing.</p>
+  <p class="press-label">Press Kit</p>
+  <div class="cta-row">
+    <a class="btn solid" href="https://store.steampowered.com/app/4707520/Jarnasmal/">Steam Page — Free Demo</a>
+    <a class="btn" href="assets/jarnasmal_presskit.zip" download>Download Full Kit (.zip)</a>
+  </div>
+</header>
+
+<main>
+  <section id="factsheet">
+    <h2><span class="signal"><i></i><i></i><i></i><i></i></span>Factsheet</h2>
+    <dl class="facts">
+      <div><dt>Developer</dt><dd>Two-person indie team</dd></div>
+      <div><dt>Release date</dt><dd>August 17, 2026</dd></div>
+      <div><dt>Platforms</dt><dd>Windows · Linux / SteamOS</dd></div>
+      <div><dt>Price</dt><dd>TBA</dd></div>
+      <div><dt>Demo</dt><dd>Free — live now on <a href="https://store.steampowered.com/app/4707520/Jarnasmal/">Steam</a></dd></div>
+      <div><dt>Festivals</dt><dd>Steam Bullet Fest (Jun 8–15, 2026)<br>Steam Next Fest (Jun 15–22, 2026)</dd></div>
+      <div><dt>Engine</dt><dd>Custom C++ engine</dd></div>
+      <div><dt>Art</dt><dd>Hand-drawn, 100% human-made</dd></div>
+      <div><dt>Press contact</dt><dd><a href="mailto:heinzflying@gmail.com">heinzflying@gmail.com</a></dd></div>
+    </dl>
+  </section>
+
+  <section id="about">
+    <h2><span class="signal"><i></i><i></i><i></i><i></i></span>About the Game</h2>
+    <div class="about">
+      <div>
+        <p class="lead"><strong>Your signal is your survival.</strong> Jarnasmal is a bullet hell built on one idea: your high-tech blaster requires a live radio connection to your ground station — and every wall, corridor, and cavern in the underground facility blocks your signal.</p>
+        <p>Strong connection means endless ammunition, maximum damage, maxed-out skills. Weak connection and your gun stalls, your abilities degrade, your explosions shrink. No connection — your blaster is dead, and the horde is still coming.</p>
+        <p>You can't just run and gun. You plan: placing signal repeaters to forge a path through the depths, calculating tech-tree combinations, pushing radio performance with higher power, wall penetration, and directional antennas — while dodging thousands of projectiles at 1000-to-1 odds.</p>
+        <ul class="features">
+          <li><b>Signal = survival</b> — connection strength directly drives your firepower</li>
+          <li><b>Mesh-network building</b> — every wall matters; repeater placement is your build</li>
+          <li><b>Deep repeater tech tree</b> — multiply effects, boost power, punch through walls</li>
+          <li><b>Overwhelming odds</b> — wall-climbers, mine layers, room floods, heavy tanks</li>
+          <li><b>Hand-drawn art</b> — every frame inked by hand, 100% human-made</li>
+        </ul>
+      </div>
+      <img class="capsule" src="assets/key-art/jarnasmal_main_capsule.png" alt="Jarnasmal key art — red runic figure over black ink tentacles">
+    </div>
+  </section>
+
+  <section id="trailer">
+    <h2><span class="signal"><i></i><i></i><i></i><i></i></span>Trailer</h2>
+    <video controls preload="metadata" poster="assets/key-art/steam_capsule_616x353.jpg">
+      <source src="assets/trailer/jarnasmal_trailer_web.mp4" type="video/mp4">
+    </video>
+    <p class="hint">Direct download: <a href="assets/trailer/jarnasmal_trailer_web.mp4" download>trailer .mp4</a></p>
+  </section>
+
+  <section id="screenshots">
+    <h2><span class="signal"><i></i><i></i><i></i><i></i></span>Screenshots</h2>
+    <div class="grid" id="shotGrid">
+      <button><img src="assets/screenshots/jarnasmal-screenshot-01.jpg" alt="Jarnasmal screenshot 1" loading="lazy"></button>
+      <button><img src="assets/screenshots/jarnasmal-screenshot-02.jpg" alt="Jarnasmal screenshot 2" loading="lazy"></button>
+      <button><img src="assets/screenshots/jarnasmal-screenshot-03.jpg" alt="Jarnasmal screenshot 3" loading="lazy"></button>
+      <button><img src="assets/screenshots/jarnasmal-screenshot-04.jpg" alt="Jarnasmal screenshot 4" loading="lazy"></button>
+      <button><img src="assets/screenshots/jarnasmal-screenshot-05.jpg" alt="Jarnasmal screenshot 5" loading="lazy"></button>
+      <button><img src="assets/screenshots/jarnasmal-screenshot-06.jpg" alt="Jarnasmal screenshot 6" loading="lazy"></button>
+    </div>
+    <p class="hint">Click to enlarge. All screenshots 1920×1080 — included in the <a href="assets/jarnasmal_presskit.zip" download>full kit</a>.</p>
+  </section>
+
+  <section id="key-art">
+    <h2><span class="signal"><i></i><i></i><i></i><i></i></span>Key Art &amp; Logo</h2>
+    <div class="art-row">
+      <figure>
+        <img src="assets/key-art/jarnasmal_main_capsule.png" alt="Main capsule">
+        <figcaption><a href="assets/key-art/jarnasmal_main_capsule.png" download>Main capsule (PNG)</a></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/key-art/jarnasmal_header_capsule.png" alt="Header capsule">
+        <figcaption><a href="assets/key-art/jarnasmal_header_capsule.png" download>Header capsule (PNG)</a></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/key-art/jarnasmal_header_art.png" alt="Header background art">
+        <figcaption><a href="assets/key-art/jarnasmal_header_art.png" download>Header art, no text (PNG)</a></figcaption>
+      </figure>
+      <figure style="background:#3a3633">
+        <img src="assets/key-art/jarnasmal_header_text.png" alt="Logo — white runic text">
+        <figcaption><a href="assets/key-art/jarnasmal_header_text.png" download>Logo, white on transparent (PNG)</a></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2><span class="signal"><i></i><i></i><i></i><i></i></span>Contact</h2>
+    <dl class="facts">
+      <div><dt>Email</dt><dd><a href="mailto:heinzflying@gmail.com">heinzflying@gmail.com</a></dd></div>
+      <div><dt>Steam</dt><dd><a href="https://store.steampowered.com/app/4707520/Jarnasmal/">store.steampowered.com/app/4707520</a></dd></div>
+    </dl>
+  </section>
+</main>
+
+<footer>
+  <p class="runic">ᛃᚨᚱᚾᚨᛋᛗᚨᛚ</p>
+  <p>All assets on this page may be used freely for coverage of Jarnasmal.<br>
+  Jarnasmal © 2026. Press kit hosted on GitHub Pages.</p>
+</footer>
+
+<dialog id="lightbox">
+  <img id="lightboxImg" src="" alt="Screenshot, full size">
+</dialog>
+
+<script>
+  const box = document.getElementById('lightbox');
+  const boxImg = document.getElementById('lightboxImg');
+  document.querySelectorAll('#shotGrid button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      boxImg.src = btn.querySelector('img').src;
+      box.showModal();
+    });
+  });
+  box.addEventListener('click', () => box.close());
+</script>
+
+</body>
+</html>
