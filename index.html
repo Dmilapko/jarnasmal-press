@@ -156,6 +156,16 @@
   .lead { font-size: 1.18rem; }
   .lead strong { color: var(--rune-glow); }
 
+  /* repeater showcase — sits on the page's own black, no frame */
+  .art-col { display: flex; flex-direction: column; gap: 1.6rem; }
+  .repeater { text-align: center; }
+  .repeater img { width: min(300px, 78%); }
+  .repeater figcaption {
+    margin-top: .5rem; font-family: 'MedievalSharp', cursive;
+    font-size: .9rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--paper-dim);
+  }
+
   ul.features { list-style: none; margin-top: 1.2rem; }
   ul.features li {
     padding: .65rem 0 .65rem 2rem;
@@ -266,7 +276,13 @@
           <li><b>Hand-drawn art</b> — every frame inked by hand, 100% human-made</li>
         </ul>
       </div>
-      <img class="capsule" src="assets/key-art/jarnasmal_main_capsule.png" alt="Jarnasmal key art — red runic figure over black ink tentacles">
+      <div class="art-col">
+        <img class="capsule" src="assets/key-art/jarnasmal_main_capsule.png" alt="Jarnasmal key art — red runic figure over black ink tentacles">
+        <figure class="repeater">
+          <img src="assets/art/repeater_dark.gif" alt="Animated signal repeater" loading="lazy">
+          <figcaption>Signal repeater</figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
